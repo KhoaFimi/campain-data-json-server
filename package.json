@@ -1,8 +1,28 @@
 {
-  "dependencies": {
-    "json-server": "1.0.0-beta.3"
-  },
-  "scripts": {
-    "start": "json-server db.json -p 3001"
-  }
+	"name": "campaign-data-json-server",
+	"version": "1.0.0",
+	"description": "",
+	"main": "index.js",
+	"scripts": {
+		"format": "prettier --config .prettierrc --write .",
+		"dev": "tsc-watch --onSuccess \"node ./dist/index.js\"",
+		"build": "rm -rf dist && tsc",
+		"start": "node dist/index"
+	},
+	"keywords": [],
+	"author": "",
+	"license": "ISC",
+	"dependencies": {
+		"cors": "^2.8.5",
+		"express": "^4.21.2"
+	},
+	"devDependencies": {
+		"@types/cors": "^2.8.17",
+		"@types/express": "^5.0.0",
+		"@types/node": "^22.10.1",
+		"eslint": "^9.16.0",
+		"prettier": "^3.4.2",
+		"tsc-watch": "^6.2.1",
+		"typescript": "^5.7.2"
+	}
 }
